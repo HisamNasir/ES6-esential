@@ -27,13 +27,13 @@ const Task8 = () => {
             setGrade('A');
           } else if (percent > 75) {
             setGrade('B');
-          } else if (percent > 50) {
+          } else if (percent > 50) {        //Grade
             setGrade('C');
           } else {
             setGrade('F');
           }
 
-        setTotal(sum);
+        setTotal(sum);              //for clling
         setPercentage(percent);
     }
   
