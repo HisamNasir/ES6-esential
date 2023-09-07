@@ -7,6 +7,7 @@ import Task5 from './components/Task5';
 import Task6 from './components/Task6';
 import Task7 from './components/Task7';
 import Task8 from './components/Task8';
+import Task9 from './components/Task9';
 // import { useState } from 'react';
 const Home = () => {
   return (
@@ -26,7 +27,9 @@ const Home = () => {
       {/*                                              // Quiz                                                              */}
       {/* <Task7/> */}
       {/*                                              // Score                                                              */}
-      <Task8/>
+      {/* <Task8/> */}
+      {/*                                              // randomPassword                                                              */}
+      <Task9/>
     </div>
   )
 }
