@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const passwordSize = () => {
     const min = 10000000;
-    const max = 99999999; // Maximum 8-digit number
+    const max = 99999999; // Maximum 8 digit password size from 1 to 99999999
     const randomPassword = Math.floor(Math.random() * (max - min + 1)) + min;
     return randomPassword.toString();
 };
