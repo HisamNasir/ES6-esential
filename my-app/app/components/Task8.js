@@ -10,54 +10,32 @@ const Task8 = () => {
     const [inputurduValue, setInputurduValue] = useState('');
     const [inputphysicValue, setInputphysicValue] = useState('');
     const [inputmathsValue, setInputmathsValue] = useState('');
-    // const { inputenglishValue } = this.props;
-    // const { inputchemValue } = this.props;
-    // const { inputurduValue } = this.props;
-    // const { inputphysicValue } = this.props;
-    // const { inputmathsValue } = this.props;
-    // const { number } = this.props;
-    let inputchemValueg;
-    let grade;
-    if ( inputchemValueg > 80) {
-        grade = 'A Grade';
-      } else if (inputchemValue > 70) {
-        grade = 'B Grade';
-      } else if (inputchemValue > 50) {
-        grade = 'C Grade';
-      } else {
-        grade = 'F Grade';
-      }
-  
-    if (inputurduValue > 80) {
-        grade = 'A Grade';
-      } else if (inputurduValue > 70) {
-        grade = 'B Grade';
-      } else if (inputurduValue > 50) {
-        grade = 'C Grade';
-      } else {
-        grade = 'F Grade';
-      }
-  
-    if (inputphysicValue > 80) {
-        grade = 'A Grade';
-      } else if (inputphysicValue > 70) {
-        grade = 'B Grade';
-      } else if (inputphysicValue > 50) {
-        grade = 'C Grade';
-      } else {
-        grade = 'F Grade';
-      }
-  
-    if (inputmathsValue > 80) {
-        grade = 'A Grade';
-      } else if (inputmathsValue > 70) {
-        grade = 'B Grade';
-      } else if (inputmathsValue > 50) {
-        grade = 'C Grade';
-      } else {
-        grade = 'F Grade';
-      }
-  
+    const [total, setTotal] = useState(0);
+    const [percentage, setPercentage] = useState(0);
+    const [grade, setGrade] = useState(0);
+
+    const calculateTotalResult=()=>{
+        const numberValue1 = parseFloat(inputchemValue);
+        const numberValue2 = parseFloat(inputenglishValue);
+        const numberValue3 = parseFloat(inputmathsValue);     //converting string number to numbers so i can use math functions on it
+        const numberValue4 = parseFloat(inputphysicValue);
+        const numberValue5 = parseFloat(inputurduValue);
+
+        const sum=numberValue1+numberValue2+numberValue3+numberValue4+numberValue5;  //addition
+        const percent=sum/500*100;  //Percentage
+        if (percent > 90) {
+            setGrade('A');
+          } else if (percent > 75) {
+            setGrade('B');
+          } else if (percent > 50) {
+            setGrade('C');
+          } else {
+            setGrade('F');
+          }
+
+        setTotal(sum);
+        setPercentage(percent);
+    }
   
     return (
         <div className=' flex justify-center items-center h-full'>
@@ -69,7 +47,7 @@ const Task8 = () => {
                         Enter the details below (score out of 100)
                     </h2>
                     <table className='w-full divide-y divide-slate-700'>
-                        <tbody>
+                        <tbody className=' divide-y divide-slate-700'>
                             <tr className='p-2 divide-x divide-slate-700'>
                                 <td>Student Name</td>
                                 <td><input className='text-black' placeholder='Full Name' value={inputnameValue} onChange={(e) => setInputnameValue(e.target.value)} /></td>
@@ -101,7 +79,7 @@ const Task8 = () => {
                         </tbody>
                     </table>
                     <div className=' flex justify-center '>
-                        <button className='p-1 m-2 rounded-md border border-green-600 text-green-600 bg-white hover:text-white hover:bg-green-600 '>
+                        <button onClick={calculateTotalResult} className='p-2 px-4 m-2 rounded-md border border-green-600 text-green-600 bg-white hover:text-white hover:bg-green-600 '>
                             Generate
                         </button>
                     </div>
@@ -121,10 +99,10 @@ const Task8 = () => {
                                     <th>Subjects</th>
                                     <th>Marsk Scored</th>
                                     <th>Total Marks</th>
-                                    <th>Grade</th>
+
                                 </tr>
                             </thead>
-                            <tbody className=' text-xs'>
+                            <tbody className=' text-xs divide-y divide-slate-700'>
                                 <tr className='p-2 divide-x divide-slate-700'>
                                 </tr>
                                 <tr className='p-2 divide-x divide-slate-700'>
@@ -132,39 +110,51 @@ const Task8 = () => {
                                     <td>English</td>
                                     <td>{inputenglishValue}</td>
                                     <td>100</td>
-                                    <td></td>
+
                                 </tr>
                                 <tr className='p-2 divide-x divide-slate-700'>
                                     <td>2</td>
                                     <td>Maths</td>
                                     <td>{inputmathsValue}</td>
                                     <td>100</td>
-                                    <td></td>
+
                                 </tr>
                                 <tr className='p-2 divide-x divide-slate-700'>
                                     <td>3</td>
                                     <td>Urdu</td>
                                     <td>{inputurduValue}</td>
                                     <td>100</td>
-                                    <td></td>
+
                                 </tr>
                                 <tr className='p-2 divide-x divide-slate-700'>
                                     <td>4</td>
                                     <td>Chem</td>
                                     <td>{inputchemValue}</td>
                                     <td>100</td>
-                                    <td></td>
+
                                 </tr>
                                 <tr className='p-2 divide-x divide-slate-700'>
                                     <td>5</td>
                                     <td>Physics</td>
                                     <td>{inputphysicValue}</td>
                                     <td>100</td>
-                                    <td></td>
+
                                 </tr>
                             </tbody>
+                                <tfoot className=' text-sm'>
+
+                                <tr className='p-2 divide-x divide-slate-700'>
+                                    <td>Obtained Marks:<a className='font-bold'>{total}</a></td>
+                                    <td>Total Marks:<a className='font-bold'>500</a></td>
+                                    <td>Percentage: <a className='font-bold'>{percentage}</a>%</td>
+                                    <td>Grade: <a>{grade}</a></td>
+
+                                </tr>
+                                </tfoot>
                         </table>
+
                     </div>
+
                 </div>
             </div>
         </div>
