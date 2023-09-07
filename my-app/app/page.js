@@ -1,0 +1,31 @@
+import React from 'react';
+import Taks1 from './components/Taks1';
+import Task2 from './components/Task2';
+import Task3 from './components/Task3';
+import Task4 from './components/Task4'
+import Task5 from './components/Task5';
+import Task6 from './components/Task6';
+import Task7 from './components/Task7';
+// import { useState } from 'react';
+const Home = () => {
+  return (
+    <div className='h-screen w-full p-20 bg-gray-700'>
+      {/*                                              // ES6                                                                */}
+      {/* <Taks1/> */}
+      {/*                                              // random quote generator                                                                */}
+      {/* <Task2/> */}
+      {/*                                              // age gen                                                                */}
+      {/* <Task3/> */}
+      {/*                                              // guess game                                                                */}
+      {/* <Task4/> */}
+      {/*                                              // Currency                                                              */}
+      {/* <Task5/> */}
+      {/*                                              // Password                                                              */}
+      {/* <Task6/> */}
+      {/*                                              // Quiz                                                              */}
+      <Task7/>
+    </div>
+  )
+}
+
+export default Home
