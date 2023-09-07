@@ -53,7 +53,7 @@ const Task8 = () => {
                                 <td><input className='text-black' placeholder='Full Name' value={inputnameValue} onChange={(e) => setInputnameValue(e.target.value)} /></td>
                             </tr>
                             <tr className='p-2 divide-x divide-slate-700'>
-                                <td>Class(11/21)</td>
+                                <td>Class(11/12)</td>
                                 <td><input type='number' min={11} max={12} className='text-black' placeholder='Class' value={inputclassValue} onChange={(e) => setInputclassValue(e.target.value)} /></td>
                             </tr>
                             <tr className='p-2 divide-x divide-slate-700'>
