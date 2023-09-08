@@ -8,10 +8,11 @@ import Task6 from './components/Task6';
 import Task7 from './components/Task7';
 import Task8 from './components/Task8';
 import Task9 from './components/Task9';
+import Task10 from './components/Task10';
 // import { useState } from 'react';
 const Home = () => {
   return (
-    <div className='h-screen w-full p-20 bg-gray-700'>
+    <div className='h-screen w-full bg-gray-700'>
       {/*                                              // ES6                                                                */}
       {/* <Taks1/> */}
       {/*                                              // random quote generator                                                                */}
@@ -29,7 +30,9 @@ const Home = () => {
       {/*                                              // Score                                                              */}
       {/* <Task8/> */}
       {/*                                              // randomPassword                                                              */}
-      <Task9/>
+      {/* <Task9/> */}
+      {/*                                              // randomPassword                                                              */}
+      <Task10/>
     </div>
   )
 }
