@@ -1,24 +1,28 @@
 'use client'
 import { useState } from 'react';
 
-const passwordSize = () => {
-    const min = 10000000;
-    const max = 99999999; // Maximum 8 digit password size from 1 to 99999999
-    const randomPassword = Math.floor(Math.random() * (max - min + 1)) + min;
-    return randomPassword.toString();
-};
+
+
 export default function Task9() {
-    const [password, setPassword] = useState('');
-    const handleRandomPassword = () => {
-        const newPassword = passwordSize();
-        setPassword(newPassword);
-    };
+
+    const [password, setPassword]=useState('');
+
+    const generateRandomPassword=() => {
+      const chars='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()';
+      const passwordLength=8;
+      let generatedPassword='';
+      for (let i=0;i<passwordLength;i++) {
+        const randomNumber=Math.floor(Math.random()*chars.length);
+        generatedPassword+=chars.charAt(randomNumber);
+      }
+      setPassword(generatedPassword);};
+
     return (
         <div className='w-full h-full flex justify-center items-center'>
             <div className=' text-center py-10 px-20 text-white rounded-xl bg-slate-900'>
                 <h1 className='text-3xl font-thin'>Random Password</h1>
                 <button className='my-10 py-2 px-4 bg-slate-600 rounded-xl hover:bg-slate-700 hover:animate-pulse'
-                    onClick={handleRandomPassword}>
+                    onClick={generateRandomPassword}>
                     Generate Password
                 </button>
                 {password && (

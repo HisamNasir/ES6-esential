@@ -30,9 +30,9 @@ const Home = () => {
       {/*                                              // Score                                                              */}
       {/* <Task8/> */}
       {/*                                              // randomPassword                                                              */}
-      {/* <Task9/> */}
-      {/*                                              // randomPassword                                                              */}
-      <Task10/>
+      <Task9/>
+      {/*                                              // add to cart                                                             */}
+      {/* <Task10/> */}
     </div>
   )
 }
