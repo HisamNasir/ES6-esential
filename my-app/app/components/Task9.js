@@ -8,7 +8,7 @@ export default function Task9() {
     const [password, setPassword]=useState('');
 
     const generateRandomPassword=() => {
-      const chars='0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()';
+      const chars='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz!@#$%^&*()0123456789';
       const passwordLength=8;
       let generatedPassword='';
       for (let i=0;i<passwordLength;i++) {
