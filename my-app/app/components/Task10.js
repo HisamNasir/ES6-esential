@@ -1,11 +1,7 @@
 'use client'
 import { useState } from 'react';
 
-const products = [
-    { id: 1, name: 'Product 1', price: 10 },
-    { id: 2, name: 'Product 2', price: 20 },
-    { id: 3, name: 'Product 3', price: 30 },
-];
+
 export default function Home() {
     const [cartItems, setCartItems] = useState([]);
     const [balance, setBalance] = useState(400);
@@ -18,6 +14,11 @@ export default function Home() {
             alert('Insufficient balance');
         }
     };
+    const products = [
+        { id: 1, name: 'Item 1', price: 12 },
+        { id: 2, name: 'Item 2', price: 22 },
+        { id: 3, name: 'Item 3', price: 33 },
+    ];
     const total = cartItems.reduce((acc, item) => acc + item.price, 0);
     const buy = () => {
         alert(`Thank you for your purchase! Total: $${total}`);
