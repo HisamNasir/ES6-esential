@@ -9,6 +9,7 @@ import Task7 from './components/Task7';
 import Task8 from './components/Task8';
 import Task9 from './components/Task9';
 import Task10 from './components/Task10';
+import Task11 from './components/Task11';
 // import { useState } from 'react';
 const Home = () => {
   return (
@@ -30,9 +31,11 @@ const Home = () => {
       {/*                                              // Score                                                              */}
       {/* <Task8/> */}
       {/*                                              // randomPassword                                                              */}
-      <Task9/>
+      {/* <Task9/> */}
       {/*                                              // add to cart                                                             */}
       {/* <Task10/> */}
+      {/*                                              // Contacts                                                            */}
+      <Task11/>
     </div>
   )
 }
