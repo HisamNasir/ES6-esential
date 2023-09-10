@@ -5,13 +5,13 @@ import React from "react";
 // Utility function to generate random data
 const randomElement = (array) => array[Math.floor(Math.random() * array.length)];
 
-const names = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Henry"];
-const genders = ["Male", "Female"];
+const characterName = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Henry"];
+const characterGender = ["Male", "Female"];
 const abilities = ["Intelligent", "Brave", "Fast Runner", "Strong"];
 
 const generateRandomCharacter = () => {
-  const name = randomElement(names);
-  const gender = randomElement(genders);
+  const name = randomElement(characterName);
+  const gender = randomElement(characterGender);
   const age = Math.floor(Math.random() * 87) + 14; // age 14 to 100
   const ability = randomElement(abilities);
   return { age, gender, name, ability };
