@@ -10,7 +10,9 @@ import Task8 from './components/Task8';
 import Task9 from './components/Task9';
 import Task10 from './components/Task10';
 import Task11 from './components/Task11';
-// import { useState } from 'react';
+import Task12 from './components/Task12';
+import Task13 from './components/Task13';
+
 const Home = () => {
   return (
     <div className='h-screen w-full bg-gray-700'>
@@ -35,7 +37,11 @@ const Home = () => {
       {/*                                              // add to cart                                                             */}
       {/* <Task10/> */}
       {/*                                              // Contacts                                                            */}
-      <Task11/>
+      {/* <Task11/> */}
+      {/*                                              // Contacts                                                            */}
+      {/* <Task12/> */}
+      {/*                                              // Contacts                                                            */}
+      <Task13/>
     </div>
   )
 }
