@@ -12,6 +12,7 @@ import Task10 from './components/Task10';
 import Task11 from './components/Task11';
 import Task12 from './components/Task12';
 import Task13 from './components/Task13';
+import Task14 from './components/Task14';
 
 const Home = () => {
   return (
@@ -40,8 +41,10 @@ const Home = () => {
       {/* <Task11/> */}
       {/*                                              // Contacts                                                            */}
       {/* <Task12/> */}
-      {/*                                              // Contacts                                                            */}
-      <Task13/>
+      {/*                                              // Weather                                                            */}
+      {/* <Task13/> */}
+      {/*                                              // character                                                            */}
+      <Task14/>
     </div>
   )
 }
