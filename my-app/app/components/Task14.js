@@ -14,7 +14,7 @@ const generateRandomCharacter = () => {
   const gender = randomElement(genders);
   const age = Math.floor(Math.random() * 87) + 14; // age 14 to 100
   const ability = randomElement(abilities);
-  return { name, gender, age, ability };
+  return { age, gender, name, ability };
 };
 const RandomCharacter = () => {
   const { name, gender, age, ability } = generateRandomCharacter();
