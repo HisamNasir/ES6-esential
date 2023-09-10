@@ -30,7 +30,7 @@ const Task13 = () => {
             </div>
         )
     }
-    else { const { name, main, weather } = weather; }
+    else { const { weather } = weather; }
     return (
         <div className='text-white'>
             <p>Temperature: {Math.round(main.temp - 273.15)}°C</p>
