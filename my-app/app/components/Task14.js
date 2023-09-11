@@ -5,9 +5,9 @@ import React from "react";
 // Utility function to generate random data
 const randomElement = (array) => array[Math.floor(Math.random() * array.length)];
 
-const characterName = ["Alice", "Bob", "Charlie", "David", "Eve", "Frank", "Grace", "Henry"];
+const characterName = ["Kamran", "Ali", "Hamza", "Hisam", "Danial", "Ayesha", "Grace", "Sara"];
 const characterGender = ["Male", "Female"];
-const abilities = ["Intelligent", "Brave", "Fast Runner", "Strong"];
+const abilities = ["Fast Runner", "Brave", "Strong", "Intelligent", "Nice"];
 
 const generateRandomCharacter = () => {
   const name = randomElement(characterName);
