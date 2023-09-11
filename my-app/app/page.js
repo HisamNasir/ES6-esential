@@ -14,6 +14,7 @@ import Task12 from './components/Task12';
 import Task13 from './components/Task13';
 import Task14 from './components/Task14';
 import Task15 from './components/Task15';
+import Task16 from './components/Task16';
 
 const Home = () => {
   return (
@@ -47,7 +48,9 @@ const Home = () => {
       {/*                                              // character                                                            */}
       {/* <Task14/> */}
       {/*                                              // images galery                                                            */}
-      <Task15/>
+      {/* <Task15/> */}
+      {/*                                              // import export                                                            */}
+      <Task16/>
     </div>
   )
 }
