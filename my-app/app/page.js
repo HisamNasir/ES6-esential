@@ -13,6 +13,7 @@ import Task11 from './components/Task11';
 import Task12 from './components/Task12';
 import Task13 from './components/Task13';
 import Task14 from './components/Task14';
+import Task15 from './components/Task15';
 
 const Home = () => {
   return (
@@ -44,7 +45,9 @@ const Home = () => {
       {/*                                              // Weather                                                            */}
       {/* <Task13/> */}
       {/*                                              // character                                                            */}
-      <Task14/>
+      {/* <Task14/> */}
+      {/*                                              // images galery                                                            */}
+      <Task15/>
     </div>
   )
 }
