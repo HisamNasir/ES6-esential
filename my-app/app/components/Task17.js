@@ -3,7 +3,7 @@ import React from 'react';
 const Task17 = () => {
   const fname = 'Hisam';
   const numbers = [1, 2, 3];
-  const person = { name: 'Ali', age: 20 };
+  const person = { name: 'Ali', age: 20, emaiil: 'abc@xyz.com' };
 
   const greeting = `Hello, ${fname}!`; //Template Literals:
   const [first, second] = numbers;  //Destructuring
